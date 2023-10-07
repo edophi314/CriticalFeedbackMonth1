@@ -16,9 +16,47 @@ begin
 	using Printf
 end
 
+# ╔═╡ ec0321ca-2341-4edd-97b7-08616ad17784
+html"""
+<blockquote>
+  <p >Experience is algorithmically incompressible.</p>
+  <footer>—Ted CHIANG, <cite>The lifecycle of Software Objects</cite></footer>
+</blockquote>
+"""
+
 # ╔═╡ 8a3a85b9-910d-49ca-ab09-6f2cff830388
 html"""
-<h1 style="color:white;text-align:center;">First trading Month With Q: Constructive Feedback</h1>
+<h1 style="color:lightblue;text-align:center;">First trading Month With Q: Constructive Feedback</h1>
+"""
+
+# ╔═╡ d485be57-b7fe-4e37-bc4d-ba9380041cee
+html"""
+<h2 style="color:lightblue;text-align:left;">1 . - Introduction: <br>One Month Of Data</h2>
+"""
+
+# ╔═╡ 32c668cf-c492-4c60-8b73-5d1b42751dcf
+md"""
+Dear Marco and team at Q,
+
+As we closed our first month of trading evaluation in September together, we feel it is a good time to review the action.
+
+The object of this web publication is twofold:
+1) **ROBUSTNESS OF METHOD**: Keep in mind the DNA of the program in the long run and insist on its singular features and operating mode.
+2) **SMOOTHNESS OF EXECUTION**: Confirm that the plausibility of the program in terms of market access, execution costs and slippage is reasonable and appropriate in the context of Dophi and Q business relationship.
+
+Scrolling down to the bottom of the page, you will find the presentation sent on July 7th 2023 via email.
+
+Please find below the equity curve of the 'model' updated to October 4th 2023, together with the actual executions from Q. It is a dataframe with 3 columns:
+- date in YYYY-MM-DD
+- PL is the 'model' PL in USD, as provided on July 7th 2023, completed to October 4th 2023.
+- plr (PL *real* ) are the *OTC "executions"* received from Q, i.e the PL reported in sheet2 of the Asec_detailed
+"""
+
+# ╔═╡ 60b6b705-93af-48ac-9baf-2905ec5c334f
+html"""
+<blockquote>
+<p style="color:green;text-align:left;"><i> Q.uant T.otal R.eturn (QTR), the title of the presentation pdf, though using the same letters as your firm's acronym, is coincidental and has to do with a Middle-Eastern country. </i></p>
+</blockquote>
 """
 
 # ╔═╡ 258ac96c-e09c-45fc-946f-99f26f6651e0
@@ -31,6 +69,21 @@ begin
 	pretty_table(ptf)
 end
 
+# ╔═╡ 860fd1e7-f992-44c1-b327-2424a52df27f
+html"""
+<h2 style="color:lightblue;text-align:left;">2 . - Quants Total Returns [QTR] <i>systems</i> DNA: <br></h2>
+"""
+
+# ╔═╡ d751fcb7-e251-4c7a-953e-4771c0f1c6aa
+html"""
+<h3 style="color:pink;text-align:left;">a) Long Run:</h3>
+"""
+
+# ╔═╡ d6b32ba2-a2b9-4ec2-a0fd-94836b3dd9aa
+md"""
+The chart below represents the daily evolution of the accumulated PL of the strategy calibrated to meet Q annual volatility allocation (i.e it is the first table of the presentation at the bottom of the page, as a daily equity curve).
+"""
+
 # ╔═╡ 4705c19a-c38d-4782-8e06-0443516208a1
 begin
 	x_dates = ptf.date 
@@ -42,8 +95,42 @@ begin
 		linewidth = 2)
 end
 
-# ╔═╡ bfeed674-d79a-46fc-bc16-d05c7f7dc3f4
+# ╔═╡ 07cf819f-02ab-4008-be93-a1c03f36ae31
+md"""
+We would like to comment on a few points:
+1) We claim to capture a *crowd* 'cognitive biais', some aggregated macro behavioral trait that keeps on recurring, with periods where it is very clean, periods where it is less clean.
+2) Massive stock index action, representing both geopolitical zones, cultures and life views, and syndicating great amounts of professional and retail liquidity are both an ex post causal explanation for the above, and an ex ante reason for the existence of the biais, in our view.
+3) Access to the market is rather sparse compared with classic spreaded/hedged arbitrage strategies: once more, we consider this feature to uniquely caracterize us, and set us apart from *pricing* inspired types of strategies (à la option pricing, or yield curve arbitrage, or pairs trading...)
+4) Execution so far has been semi-automated, with discretionnary trader's input in the trigger's neighbourhood (in space and time): we consider that this activity requires to both read and act on the market with a constantly critical mindset, and idea generation is conditional on that attitude. As time goes by, the trend is full automation.
+5) It is clear to us that over that last 15 years, the explosion of interest in DELTA 1 type of trading and index arbitrage desks in banks, as well as the explosion of ETFs, CFDs and the democratization of speculation has fueled opportunities for what we do.
+"""
 
+# ╔═╡ 5fe0f3e3-129b-435d-92b4-ce09f8bfb507
+html"""
+<h3 style="color:pink;text-align:left;">b) 2023:</h3>
+"""
+
+# ╔═╡ a3fb0f36-5e41-4ad8-81cb-9bb8774cc459
+md"""
+We extracted from the equity curve above the 2023 portion, and since we started trading with Q, the executions of the program as documented in the QSec_Detailed_DP_YYY-MM-DD.xlsx (the plr column, green curve, tracking the blue 'model' curve).
+
+The analysis of the real vs paper follows in the next paragraph. Nevertheless, starting in a losing streak as is the case right now is an excellenet reminder of where the emphasis and focus should be placed: executing well, in a disciplined and dispassionate manner, and tracking the paper model.
+"""
+
+# ╔═╡ 786b14ed-50aa-4f0c-9aa3-88944a00382d
+ptf2023 = filter(row -> row.date > Date(2022, 12, 31), ptf)
+
+# ╔═╡ 4c5c8dd0-d3e3-4384-a224-be93d0dceada
+begin
+	plot(ptf2023.date, [cumsum(ptf2023.PL) accumulate(max, cumsum(ptf2023.PL)) cumsum(ptf2023.plr) .+ 2517268.5], 
+		label= ["PL_theo" "PL_HWM (High Watermark)" "PL_Q"], 
+		linewidth = 2)
+end
+
+# ╔═╡ 36541f82-0b8d-4c61-b577-1d2beaf6fa54
+html"""
+<h2 style="color:lightblue;text-align:left;">3 . - Real Life: <br>A Month With Q</h2>
+"""
 
 # ╔═╡ 59cfa2bd-ad8c-4201-bdb4-7d73c74a0bd6
 inception_ptf = filter(row -> row.date > Date(2023, 9, 1), ptf)
@@ -1304,14 +1391,26 @@ version = "1.4.1+1"
 """
 
 # ╔═╡ Cell order:
+# ╟─ec0321ca-2341-4edd-97b7-08616ad17784
 # ╟─e87a7583-62d2-4d3c-bacd-bbf69e374d02
 # ╟─8a3a85b9-910d-49ca-ab09-6f2cff830388
+# ╟─d485be57-b7fe-4e37-bc4d-ba9380041cee
+# ╟─32c668cf-c492-4c60-8b73-5d1b42751dcf
+# ╟─60b6b705-93af-48ac-9baf-2905ec5c334f
 # ╟─258ac96c-e09c-45fc-946f-99f26f6651e0
 # ╟─e5bf3088-4146-4f24-9cb2-a54b7b7d3afa
+# ╟─860fd1e7-f992-44c1-b327-2424a52df27f
+# ╠═d751fcb7-e251-4c7a-953e-4771c0f1c6aa
+# ╟─d6b32ba2-a2b9-4ec2-a0fd-94836b3dd9aa
 # ╟─4705c19a-c38d-4782-8e06-0443516208a1
-# ╠═bfeed674-d79a-46fc-bc16-d05c7f7dc3f4
-# ╟─59cfa2bd-ad8c-4201-bdb4-7d73c74a0bd6
-# ╟─f4d812e7-cdfc-496e-9c85-d19953f09e36
+# ╟─07cf819f-02ab-4008-be93-a1c03f36ae31
+# ╟─5fe0f3e3-129b-435d-92b4-ce09f8bfb507
+# ╟─a3fb0f36-5e41-4ad8-81cb-9bb8774cc459
+# ╟─786b14ed-50aa-4f0c-9aa3-88944a00382d
+# ╟─4c5c8dd0-d3e3-4384-a224-be93d0dceada
+# ╠═36541f82-0b8d-4c61-b577-1d2beaf6fa54
+# ╠═59cfa2bd-ad8c-4201-bdb4-7d73c74a0bd6
+# ╠═f4d812e7-cdfc-496e-9c85-d19953f09e36
 # ╟─2d58e665-7f6e-4544-82eb-ce3bb82cbfde
 # ╟─19ee2bd6-df0a-417f-b685-3f6b18ec8b1f
 # ╟─cb2a6e61-0bb8-400a-aa43-0f3a6a4d3615
