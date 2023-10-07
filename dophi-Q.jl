@@ -112,9 +112,9 @@ html"""
 
 # ╔═╡ a3fb0f36-5e41-4ad8-81cb-9bb8774cc459
 md"""
-We extracted from the equity curve above the 2023 portion, and since we started trading with Q, the executions of the program as documented in the QSec_Detailed_DP_YYY-MM-DD.xlsx (the plr column, green curve, tracking the blue 'model' curve).
+We extracted from the equity curve above the 2023 portion, and since we started trading with Q, the executions of the program as documented in the QSec\_Detailed\_DP\_YYYY-MM-DD.xlsx (the *plr* column, green curve, tracking the blue *PL* 'model' curve).
 
-The analysis of the real vs paper follows in the next paragraph. Nevertheless, starting in a losing streak as is the case right now is an excellenet reminder of where the emphasis and focus should be placed: executing well, in a disciplined and dispassionate manner, and tracking the paper model.
+The analysis of the real vs paper follows in the next paragraph. Nevertheless, starting in a losing streak as is the case right now is an excellent reminder of where the emphasis and focus should be placed: executing well, in a disciplined and dispassionate manner, and tracking the paper model.
 """
 
 # ╔═╡ 786b14ed-50aa-4f0c-9aa3-88944a00382d
@@ -1405,7 +1405,7 @@ version = "1.4.1+1"
 # ╟─4705c19a-c38d-4782-8e06-0443516208a1
 # ╟─07cf819f-02ab-4008-be93-a1c03f36ae31
 # ╟─5fe0f3e3-129b-435d-92b4-ce09f8bfb507
-# ╟─a3fb0f36-5e41-4ad8-81cb-9bb8774cc459
+# ╠═a3fb0f36-5e41-4ad8-81cb-9bb8774cc459
 # ╟─786b14ed-50aa-4f0c-9aa3-88944a00382d
 # ╟─4c5c8dd0-d3e3-4384-a224-be93d0dceada
 # ╠═36541f82-0b8d-4c61-b577-1d2beaf6fa54
@@ -1414,7 +1414,7 @@ version = "1.4.1+1"
 # ╟─2d58e665-7f6e-4544-82eb-ce3bb82cbfde
 # ╟─19ee2bd6-df0a-417f-b685-3f6b18ec8b1f
 # ╟─cb2a6e61-0bb8-400a-aa43-0f3a6a4d3615
-# ╟─e6f032ec-2d66-4497-8b0c-a1b779b024a4
+# ╠═e6f032ec-2d66-4497-8b0c-a1b779b024a4
 # ╟─8db46ef0-c78b-4384-9cb1-80fa4b69190e
 # ╟─83bfde8c-0816-4ac4-9141-b0bf7a8a6d50
 # ╟─53033760-1ac1-442c-af0c-0488340e9aad
