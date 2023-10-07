@@ -18,7 +18,7 @@ end
 
 # ╔═╡ 8a3a85b9-910d-49ca-ab09-6f2cff830388
 html"""
-<h1 style="color:white;text-align:center;">First trading Month With Q: Critical Feedback</h1>
+<h1 style="color:white;text-align:center;">First trading Month With Q: Constructive Feedback</h1>
 """
 
 # ╔═╡ 258ac96c-e09c-45fc-946f-99f26f6651e0
@@ -1305,16 +1305,16 @@ version = "1.4.1+1"
 
 # ╔═╡ Cell order:
 # ╟─e87a7583-62d2-4d3c-bacd-bbf69e374d02
-# ╠═8a3a85b9-910d-49ca-ab09-6f2cff830388
+# ╟─8a3a85b9-910d-49ca-ab09-6f2cff830388
 # ╟─258ac96c-e09c-45fc-946f-99f26f6651e0
-# ╠═e5bf3088-4146-4f24-9cb2-a54b7b7d3afa
-# ╠═4705c19a-c38d-4782-8e06-0443516208a1
+# ╟─e5bf3088-4146-4f24-9cb2-a54b7b7d3afa
+# ╟─4705c19a-c38d-4782-8e06-0443516208a1
 # ╠═bfeed674-d79a-46fc-bc16-d05c7f7dc3f4
-# ╠═59cfa2bd-ad8c-4201-bdb4-7d73c74a0bd6
-# ╠═f4d812e7-cdfc-496e-9c85-d19953f09e36
-# ╠═2d58e665-7f6e-4544-82eb-ce3bb82cbfde
-# ╠═19ee2bd6-df0a-417f-b685-3f6b18ec8b1f
-# ╠═cb2a6e61-0bb8-400a-aa43-0f3a6a4d3615
+# ╟─59cfa2bd-ad8c-4201-bdb4-7d73c74a0bd6
+# ╟─f4d812e7-cdfc-496e-9c85-d19953f09e36
+# ╟─2d58e665-7f6e-4544-82eb-ce3bb82cbfde
+# ╟─19ee2bd6-df0a-417f-b685-3f6b18ec8b1f
+# ╟─cb2a6e61-0bb8-400a-aa43-0f3a6a4d3615
 # ╟─e6f032ec-2d66-4497-8b0c-a1b779b024a4
 # ╟─8db46ef0-c78b-4384-9cb1-80fa4b69190e
 # ╟─83bfde8c-0816-4ac4-9141-b0bf7a8a6d50
