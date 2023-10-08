@@ -14,6 +14,8 @@ begin
 	using Statistics
 	using PlutoUI
 	using Printf
+	using PlotThemes
+	theme(:dao)
 end
 
 # ╔═╡ ec0321ca-2341-4edd-97b7-08616ad17784
@@ -248,6 +250,7 @@ PLUTO_PROJECT_TOML_CONTENTS = """
 CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
 DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
+PlotThemes = "ccf2f8ad-2431-5c83-bf29-c5338b663b6a"
 Plots = "91a5bcdd-55d7-5caf-9e0b-520d859cae80"
 PlutoUI = "7f904dfe-b85e-4ff6-b463-dae2292396a8"
 PrettyTables = "08abe8d2-0d0c-5749-adfa-8a2ac140af0d"
@@ -257,6 +260,7 @@ Statistics = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
 [compat]
 CSV = "~0.10.11"
 DataFrames = "~1.6.1"
+PlotThemes = "~3.1.0"
 Plots = "~1.39.0"
 PlutoUI = "~0.7.52"
 PrettyTables = "~2.2.7"
@@ -268,7 +272,7 @@ PLUTO_MANIFEST_TOML_CONTENTS = """
 
 julia_version = "1.9.3"
 manifest_format = "2.0"
-project_hash = "e309187b752f5390ae8b6c6cbf3d4f4c21ad36aa"
+project_hash = "708ec6301fa665068697118cc35edc1f03fa17d1"
 
 [[deps.AbstractPlutoDingetjes]]
 deps = ["Pkg"]
@@ -1444,7 +1448,7 @@ version = "1.4.1+1"
 
 # ╔═╡ Cell order:
 # ╟─ec0321ca-2341-4edd-97b7-08616ad17784
-# ╟─e87a7583-62d2-4d3c-bacd-bbf69e374d02
+# ╠═e87a7583-62d2-4d3c-bacd-bbf69e374d02
 # ╟─8a3a85b9-910d-49ca-ab09-6f2cff830388
 # ╟─d485be57-b7fe-4e37-bc4d-ba9380041cee
 # ╟─32c668cf-c492-4c60-8b73-5d1b42751dcf
