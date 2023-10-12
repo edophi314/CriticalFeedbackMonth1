@@ -138,7 +138,7 @@ ptf2023 = filter(row -> row.date > Date(2022, 12, 31), ptf)
 # ╔═╡ 4c5c8dd0-d3e3-4384-a224-be93d0dceada
 begin
 	plot(ptf2023.date, [cumsum(ptf2023.PL) accumulate(max, cumsum(ptf2023.PL)) cumsum(ptf2023.plr) .+ 2517268.5], 
-		label= ["PL_theo" "PL_HWM (High Watermark)" "PL_Q"], 
+		label= ["PL_model" "PL_HWM (High Watermark)" "PL_Q"], 
 		linewidth = 1,
 	legend = :topleft)
 end
@@ -159,15 +159,7 @@ The 'chunks' of market action captured, so to speak, are unaffected by the local
 inception_ptf = filter(row -> row.date > Date(2023, 9, 1), ptf)
 
 # ╔═╡ f4d812e7-cdfc-496e-9c85-d19953f09e36
-#pretty_table(inception_ptf, formatters = (v, i, j) -> (j == 2 || j == 3)  ? @sprintf("%.5f", v) : v, crop = :none)
-
-# ╔═╡ e1ed75ec-2f91-4fd3-b632-b2b28698aa03
-begin
-	html"""<img src=https://github.com/edophi314/CriticalFeedbackMonth1/blob/main/QSepData.png?raw=true width="800" />"""
-end
-
-
-
+pretty_table(inception_ptf, formatters = (v, i, j) -> (j == 2 || j == 3)  ? @sprintf("%.5f", v) : v, crop = :none)
 
 # ╔═╡ 960e0c6c-3506-4386-aa5d-7e2ce9c3f910
 md"""
@@ -1479,7 +1471,7 @@ version = "1.4.1+1"
 
 # ╔═╡ Cell order:
 # ╟─ec0321ca-2341-4edd-97b7-08616ad17784
-# ╟─e87a7583-62d2-4d3c-bacd-bbf69e374d02
+# ╠═e87a7583-62d2-4d3c-bacd-bbf69e374d02
 # ╟─8a3a85b9-910d-49ca-ab09-6f2cff830388
 # ╟─d485be57-b7fe-4e37-bc4d-ba9380041cee
 # ╟─32c668cf-c492-4c60-8b73-5d1b42751dcf
@@ -1487,21 +1479,20 @@ version = "1.4.1+1"
 # ╟─b1f20aba-0b31-448b-ba75-fbccfa7d9093
 # ╟─60b6b705-93af-48ac-9baf-2905ec5c334f
 # ╟─258ac96c-e09c-45fc-946f-99f26f6651e0
-# ╟─e5bf3088-4146-4f24-9cb2-a54b7b7d3afa
+# ╠═e5bf3088-4146-4f24-9cb2-a54b7b7d3afa
 # ╟─860fd1e7-f992-44c1-b327-2424a52df27f
 # ╟─d751fcb7-e251-4c7a-953e-4771c0f1c6aa
 # ╟─d6b32ba2-a2b9-4ec2-a0fd-94836b3dd9aa
-# ╟─4705c19a-c38d-4782-8e06-0443516208a1
+# ╠═4705c19a-c38d-4782-8e06-0443516208a1
 # ╟─07cf819f-02ab-4008-be93-a1c03f36ae31
 # ╟─5fe0f3e3-129b-435d-92b4-ce09f8bfb507
 # ╟─a3fb0f36-5e41-4ad8-81cb-9bb8774cc459
 # ╟─786b14ed-50aa-4f0c-9aa3-88944a00382d
-# ╟─4c5c8dd0-d3e3-4384-a224-be93d0dceada
+# ╠═4c5c8dd0-d3e3-4384-a224-be93d0dceada
 # ╟─36541f82-0b8d-4c61-b577-1d2beaf6fa54
 # ╟─1bb81fba-4a67-4894-83bd-f8bb80e1a459
 # ╟─59cfa2bd-ad8c-4201-bdb4-7d73c74a0bd6
 # ╟─f4d812e7-cdfc-496e-9c85-d19953f09e36
-# ╟─e1ed75ec-2f91-4fd3-b632-b2b28698aa03
 # ╟─960e0c6c-3506-4386-aa5d-7e2ce9c3f910
 # ╟─2d58e665-7f6e-4544-82eb-ce3bb82cbfde
 # ╟─19ee2bd6-df0a-417f-b685-3f6b18ec8b1f
