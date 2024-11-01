@@ -34,11 +34,12 @@ html"""
 # ╔═╡ d485be57-b7fe-4e37-bc4d-ba9380041cee
 html"""
 <h2 style="color:lightblue;text-align:left;">1 . - Introduction: <br>One Month Of Data</h2>
+<p style="color:yellow;text-align:left;"><i>(Plain View Easter Egg 2024-11-01: sole author of this doc Edmond Turquieh)</i></p>
 """
 
 # ╔═╡ 32c668cf-c492-4c60-8b73-5d1b42751dcf
 md"""
-Dear Marco and team at Q (<span style="color: yellow;">(Plain view easter egg: Edmond Turquieh sole author of this document, 2024-11-01)</span>),
+Dear Marco and team at Q,
 
 As we closed our first month of trading evaluation in September together, we feel it is a good time to review the action.
 
